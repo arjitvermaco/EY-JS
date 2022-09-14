@@ -5,7 +5,11 @@ let car = {
     name : "Swift",
     brand : "Maruti",
     model: 2020,
-    color:"White"
+    color:"White",
+    getCarDetails:function(){
+        return `The name of the car is ${this.name} and brand is ${this.brand}. 
+        Model is ${this.model}`
+    }
 }
 
 console.log(car);
@@ -24,7 +28,7 @@ console.log(car["model"]);
 //Modify an object
 
 //Updating any Property
-car.model = "Tata";
+// car.model = "Tata";
 //Adding a new property to the object
 car.owner = "Arjit"
 
@@ -32,4 +36,7 @@ delete car.owner;
 
 console.log("Car Object after update:",car)
 console.log(car["model"]);
+
+let carDetails = car.getCarDetails();
+console.log(carDetails)
 
